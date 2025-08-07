@@ -1,0 +1,52 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Master",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/master/build/master.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "runToEntryPoint": "main",
+            "servertype": "jlink",
+            "device": "MIMX8ML8_M7",
+            "interface": "jtag",
+            "armToolchainPath": "${workspaceFolder}/arm-toolchain/bin",
+            "preLaunchCommands": [
+                "set mem inaccessible-by-default off",
+            ],
+            "postLaunchCommands": [
+                "monitor sleep 1500",
+                "target remote localhost:50000",
+                "monitor reset",
+                "monitor halt",
+                "load"
+            ]
+        },
+        {
+            "name": "Run Slave",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/slave/build/slave.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "runToEntryPoint": "main",
+            "servertype": "jlink",
+            "device": "MIMX8ML8_M7",
+            "interface": "jtag",
+            "armToolchainPath": "${workspaceFolder}/arm-toolchain/bin",
+            "preLaunchCommands": [
+                "set mem inaccessible-by-default off",
+            ],
+            "postLaunchCommands": [
+                "monitor sleep 1500",
+                "target remote localhost:50000",
+                "monitor reset",
+                "monitor halt",
+                "load"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "files.associations": {
+        "fsl_device_registers.h": "c",
+        "clock_config.h": "c",
+        "board.h": "c",
+        "mimx8ml8_cm7.h": "c",
+        "fsl_debug_console.h": "c",
+        "cstdint": "c",
+        "fsl_gpio.h": "c",
+        "fsl_common.h": "c",
+        "fsl_iomuxc.h": "c",
+        "pin_mux.h": "c",
+        "fsl_clock.h": "c",
+        "core_cm7.h": "c",
+        "fsl_ecspi.h": "c",
+        "fsl_rdc.h": "c",
+        "system_mimx8ml8_cm7.h": "c",
+        "mpu_armv7.h": "c",
+        "stdbool.h": "c",
+        "ranges": "cpp"
+    }
+}

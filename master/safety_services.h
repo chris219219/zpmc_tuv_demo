@@ -1,0 +1,4 @@
+#ifndef SAFETY_SERVICES_H
+#define SAFETY_SERVICES_H
+
+#endif
